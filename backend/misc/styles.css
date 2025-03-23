@@ -1,0 +1,104 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e30;
+    color: white;
+  }
+  
+  /* Weather Dashboard Grid */
+  .weather-dashboard {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 3/4 for the left column, 1/4 for the right */
+    grid-template-rows: auto auto 1fr; /* Auto adjust heights, with last row filling remaining space */
+    gap: 20px;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  /* Left Column */
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Current Weather Section */
+  .current-weather {
+    text-align: center;
+    background-color: #2a2a40;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .current-weather h1 {
+    font-size: 2rem;
+  }
+  
+  .current-weather .temperature {
+    font-size: 4rem;
+    margin: 10px 0;
+  }
+  
+  /* Today's Forecast */
+  .todays-forecast {
+    background-color: #2a2a40;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .todays-forecast h2 {
+    margin-bottom: 15px;
+  }
+  
+  .forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
+    gap: 10px;
+  }
+  
+  .forecast-item {
+    text-align: center;
+    background-color: #3b3b50;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Air Conditions */
+  .air-conditions {
+    background-color: #2a2a40;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .conditions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .conditions-grid div {
+    background-color: #3b3b50;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  /* Right Column */
+  .right-column {
+    background-color: #2a2a40;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .right-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .right-column li {
+    margin: 10px 0;
+  }
+  

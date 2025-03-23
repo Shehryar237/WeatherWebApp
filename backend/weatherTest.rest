@@ -1,0 +1,44 @@
+@backendUrl = http://localhost:3001
+@validCity1 = London
+@validCity2 = New York
+@invalidCity = InvalidCity123
+
+### Fetch Current Weather Data for London
+GET {{backendUrl}}/api/weather?city={{validCity1}}
+Content-Type: application/json
+
+### Fetch Current Weather Data for New York
+GET {{backendUrl}}/api/weather?city={{validCity2}}
+Content-Type: application/json
+
+### Fetch Current Weather Data with Missing City (Should Return Error)
+GET {{backendUrl}}/api/weather
+Content-Type: application/json
+
+### Fetch Current Weather Data for Invalid City (Should Return Error)
+GET {{backendUrl}}/api/weather?city={{invalidCity}}
+Content-Type: application/json
+
+### Fetch Weather Forecast for London (3 Days)
+GET {{backendUrl}}/api/forecast?city={{validCity1}}&days=3
+Content-Type: application/json
+
+### Fetch Weather Forecast for New York (5 Days)
+GET {{backendUrl}}/api/forecast?city={{validCity2}}&days=5
+Content-Type: application/json
+
+### Fetch Weather Forecast with Missing City (Should Return Error)
+GET {{backendUrl}}/api/forecast?days=3
+Content-Type: application/json
+
+### Fetch Weather Forecast for Invalid City (Should Return Error)
+GET {{backendUrl}}/api/forecast?city={{invalidCity}}&days=3
+Content-Type: application/json
+
+### Search for Locations Matching "Paris"
+GET {{backendUrl}}/api/search?q=Paris
+Content-Type: application/json
+
+### Search with Missing Query (Should Return Error)
+GET {{backendUrl}}/api/search
+Content-Type: application/json
